@@ -26,7 +26,8 @@ REGISTRY_URL := gcr.io/cloud-foundation-cicd
 .PHONY: docker_run
 docker_run:
 	docker run --rm -it \
-		-v "$(CURDIR)":/workspace \
+		-e SERVICE_ACCOUNT_JSON \
+		-v $(CURDIR):/workspace \
 		$(REGISTRY_URL)/${DOCKER_IMAGE_DEVELOPER_TOOLS}:${DOCKER_TAG_VERSION_DEVELOPER_TOOLS} \
 		/bin/bash
 
@@ -34,7 +35,11 @@ docker_run:
 .PHONY: docker_test_prepare
 docker_test_prepare:
 	docker run --rm -it \
-		-v "$(CURDIR)":/workspace \
+		-e SERVICE_ACCOUNT_JSON \
+		-e TF_VAR_org_id \
+		-e TF_VAR_folder_id \
+		-e TF_VAR_billing_account \
+		-v $(CURDIR):/workspace \
 		$(REGISTRY_URL)/${DOCKER_IMAGE_DEVELOPER_TOOLS}:${DOCKER_TAG_VERSION_DEVELOPER_TOOLS} \
 		/usr/local/bin/execute_with_credentials.sh prepare_environment
 
@@ -42,7 +47,11 @@ docker_test_prepare:
 .PHONY: docker_test_cleanup
 docker_test_cleanup:
 	docker run --rm -it \
-		-v "$(CURDIR)":/workspace \
+		-e SERVICE_ACCOUNT_JSON \
+		-e TF_VAR_org_id \
+		-e TF_VAR_folder_id \
+		-e TF_VAR_billing_account \
+		-v $(CURDIR):/workspace \
 		$(REGISTRY_URL)/${DOCKER_IMAGE_DEVELOPER_TOOLS}:${DOCKER_TAG_VERSION_DEVELOPER_TOOLS} \
 		/usr/local/bin/execute_with_credentials.sh cleanup_environment
 
@@ -50,7 +59,8 @@ docker_test_cleanup:
 .PHONY: docker_test_integration
 docker_test_integration:
 	docker run --rm -it \
-		-v "$(CURDIR)":/workspace \
+		-e SERVICE_ACCOUNT_JSON \
+		-v $(CURDIR):/workspace \
 		$(REGISTRY_URL)/${DOCKER_IMAGE_DEVELOPER_TOOLS}:${DOCKER_TAG_VERSION_DEVELOPER_TOOLS} \
 		/usr/local/bin/test_integration.sh
 
@@ -58,7 +68,7 @@ docker_test_integration:
 .PHONY: docker_test_lint
 docker_test_lint:
 	docker run --rm -it \
-		-v "$(CURDIR)":/workspace \
+		-v $(CURDIR):/workspace \
 		$(REGISTRY_URL)/${DOCKER_IMAGE_DEVELOPER_TOOLS}:${DOCKER_TAG_VERSION_DEVELOPER_TOOLS} \
 		/usr/local/bin/test_lint.sh
 
@@ -66,7 +76,7 @@ docker_test_lint:
 .PHONY: docker_generate_docs
 docker_generate_docs:
 	docker run --rm -it \
-		-v "$(CURDIR)":/workspace \
+		-v $(CURDIR):/workspace \
 		$(REGISTRY_URL)/${DOCKER_IMAGE_DEVELOPER_TOOLS}:${DOCKER_TAG_VERSION_DEVELOPER_TOOLS} \
 		/bin/bash -c 'source /usr/local/bin/task_helper_functions.sh && generate_docs'
 
