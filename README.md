@@ -40,14 +40,15 @@ Functional examples are included in the
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| bucket\_name | The name of the bucket to create | string | n/a | yes |
-| project\_id | The project ID to deploy to | string | n/a | yes |
+| region | A list of GCP region codes for each of the given regions. i.e. "us-central1"="usc1" | string | `"null"` | no |
+| regions | A list of GCP region codes for each of the given regions. i.e. ["us-central1"] => {"us-central1"="usc1"} | list | `<list>` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| bucket\_name |  |
+| region\_short\_name | The 4 or 5 character shortname of a given region. |
+| region\_short\_name\_map | The 4 or 5 character shortname of any given region. |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
