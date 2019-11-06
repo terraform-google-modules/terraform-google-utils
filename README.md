@@ -23,7 +23,7 @@ output "region_shortname_map" {
 module "utils" {
   source  = "terraform-google-modules/utils/google"
   version = "~> 0.1"
-  regions = "us-central1"
+  region  = "us-central1"
 }
 
 output "region_shortname" {

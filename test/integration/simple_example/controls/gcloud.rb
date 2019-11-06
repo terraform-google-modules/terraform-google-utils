@@ -12,12 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+output_region_shortname = attribute("output_region_shortname")
+
 control "gcloud" do
   title "gcloud"
 
-  describe command("gcloud compute regions list") do
+  describe "outputs" do
     its(:exit_status) { should eq 0 }
     its(:stderr) { should eq "" }
-    #its(:stdout) { should match "storage-api.googleapis.com" }
+
+    it 'should have a valid region' do
+      expect(output_region_shortname).to eq "usc1"
+    end
   end
 end

@@ -14,11 +14,12 @@
  * limitations under the License.
  */
 
-provider "google" {
-  version = "~> 2.0"
+output "region_short_name_map" {
+  description = "The 4 or 5 character shortname of any given region."
+  value       = "${module.example.region_short_name_map}"
 }
 
-module "utils" {
-  source = "../.."
-  region = "us-central1"
+output "region_short_name" {
+  description = "The 4 or 5 character shortname of a given region."
+  value       = "${module.example.region_short_name}"
 }

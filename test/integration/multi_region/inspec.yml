@@ -6,9 +6,9 @@ depends:
 supports:
   - platform: gcp
 attributes:
-  - name: region
+  - name: regions
     required: true
-    type: string
-  - name: output_region_shortname
+    type: array
+  - name: output_region_short_name_map
     required: true
-    type: string
+    type: array

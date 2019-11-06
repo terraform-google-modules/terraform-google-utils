@@ -16,7 +16,4 @@
 
 module "example" {
   source = "../../../examples/simple_example"
-
-  region  = "us-west1"
-  regions = ["us-west1", "us-central1"]
 }
