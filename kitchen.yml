@@ -23,7 +23,7 @@ verifier:
       backend: gcp
 
 platforms:
-  - name: local
+  - name: gcp
 
 suites:
   - name: simple_example
