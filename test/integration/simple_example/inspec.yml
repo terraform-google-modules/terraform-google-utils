@@ -9,6 +9,6 @@ attributes:
   - name: region
     required: true
     type: string
-  - name: output_region_shortname
+  - name: output_region_short_name
     required: true
     type: string

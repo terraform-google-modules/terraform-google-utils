@@ -13,9 +13,6 @@
 # limitations under the License.
 
 ---
-driver:
-  name: terraform
-
 provisioner:
   name: terraform
 
@@ -23,10 +20,10 @@ verifier:
   name: terraform
   systems:
     - name: system
-      backend: gcloud
+      backend: gcp
 
 platforms:
-  - name: default
+  - name: local
 
 suites:
   - name: simple_example

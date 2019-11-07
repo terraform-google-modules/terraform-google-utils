@@ -14,16 +14,9 @@
 
 output_region_map = attribute("output_region_short_name_map")
 
-control "gcloud" do
-  title "gcloud"
-
-  describe "outputs" do
-    its(:exit_status) { should eq 0 }
-    its(:stderr) { should eq "" }
-
-    it 'should have a valid region' do
-      expect(output_region_map["us-central1"]).to eq "usc1"
-      expect(output_region_map["us-east1"]).to eq "use1"
-    end
+describe "outputs" do
+  it 'should have a valid region' do
+    expect(output_region_map["us-central1"]).to eq "usc1"
+    expect(output_region_map["us-east1"]).to eq "use1"
   end
 end

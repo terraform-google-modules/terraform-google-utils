@@ -12,17 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-output_region_shortname = attribute("output_region_shortname")
+output_region_short_name = attribute("output_region_short_name")
 
-control "gcloud" do
-  title "gcloud"
-
-  describe "outputs" do
-    its(:exit_status) { should eq 0 }
-    its(:stderr) { should eq "" }
-
-    it 'should have a valid region' do
-      expect(output_region_shortname).to eq "usc1"
-    end
+describe "outputs" do
+  it 'should have a valid region' do
+    expect(output_region_short_name).to eq "usc1"
   end
 end

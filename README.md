@@ -15,7 +15,7 @@ module "utils" {
   regions = ["us-central1", "us-west1"]
 }
 
-output "region_shortname_map" {
+output "region_short_name_map" {
   description = "Map of full to short name of all given regions"
   value       = "${module.utils.region_short_name_map}"
 }
@@ -26,7 +26,7 @@ module "utils" {
   region  = "us-central1"
 }
 
-output "region_shortname" {
+output "region_short_name" {
   description = "Short name of the given region"
   value       = "${module.utils.region_short_name}"
 }

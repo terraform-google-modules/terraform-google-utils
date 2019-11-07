@@ -11,4 +11,4 @@ attributes:
     type: array
   - name: output_region_short_name_map
     required: true
-    type: array
+    type: hash
