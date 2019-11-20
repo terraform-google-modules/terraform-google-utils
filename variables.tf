@@ -14,12 +14,6 @@
  * limitations under the License.
  */
 
-variable "regions" {
-  description = "A list of GCP region codes for each of the given regions. i.e. [\"us-central1\"] => {\"us-central1\"=\"usc1\"}"
-  type        = list
-  default     = []
-}
-
 variable "region" {
   description = "A list of GCP region codes for each of the given regions. i.e. \"us-central1\"=\"usc1\""
   type        = string

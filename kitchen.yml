@@ -30,7 +30,3 @@ suites:
     driver:
       name: terraform
       root_module_directory: test/fixtures/simple_example
-  - name: multi_region
-    driver:
-      name: terraform
-      root_module_directory: test/fixtures/multi_region

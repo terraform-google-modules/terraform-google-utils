@@ -33,21 +33,4 @@ locals {
     local.continent_short_name[local.parts[0]],
     replace(local.parts[1], "/(n)orth|(s)outh|(e)ast|(w)est|(c)entral/", "$1$2$3$4$5")
   ])
-  # Same computation but kick back a map
-  region_short_name_map = var.regions == [] ? {} : { for full_region in var.regions : full_region =>
-    join(
-      "", [
-        local.continent_short_name[split(
-          "-",
-          full_region
-        )[0]],
-        replace(
-          split(
-          "-", full_region)[1],
-          "/(n)orth|(s)outh|(e)ast|(w)est|(c)entral/",
-          "$1$2$3$4$5"
-        )
-      ]
-    )
-  }
 }
