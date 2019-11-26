@@ -12,6 +12,17 @@ Basic usage of this module is as follows:
 module "utils" {
   source  = "terraform-google-modules/utils/google"
   version = "~> 0.1"
+  regions = ["us-central1", "us-west1"]
+}
+
+output "region_short_name_map" {
+  description = "Map of full to short name of all given regions"
+  value       = "${module.utils.region_short_name_map}"
+}
+
+module "utils" {
+  source  = "terraform-google-modules/utils/google"
+  version = "~> 0.1"
   region  = "us-central1"
 }
 
@@ -30,12 +41,14 @@ Functional examples are included in the
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
 | region | A list of GCP region codes for each of the given regions. i.e. "us-central1"="usc1" | string | `"null"` | no |
+| regions | A list of GCP region codes for each of the given regions. i.e. ["us-central1"] => {"us-central1"="usc1"} | list | `<list>` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
 | region\_short\_name | The 4 or 5 character shortname of a given region. |
+| region\_short\_name\_map | The 4 or 5 character shortname of any given region. |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 

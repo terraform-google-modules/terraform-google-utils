@@ -14,14 +14,12 @@
  * limitations under the License.
  */
 
-variable "regions" {
-  description = "A list of GCP region codes for each of the given regions. i.e. [\"us-central1\"] => {\"us-central1\"=\"usc1\"}"
-  type        = list
-  default     = []
+provider "google" {
+  version = "~> 2.0"
 }
 
-variable "region" {
-  description = "A list of GCP region codes for each of the given regions. i.e. \"us-central1\"=\"usc1\""
-  type        = string
-  default     = null
+module "utils" {
+  source  = "../.."
+  regions = ["us-central1", "us-east1"]
 }
+

@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#      http://www.apache.org/licenses/LICENSE-2.0
+#     https://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -12,25 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
----
-provisioner:
-  name: terraform
+output_region_map = attribute("output_region_short_name_map")
 
-verifier:
-  name: terraform
-  systems:
-    - name: system
-      backend: gcp
-
-platforms:
-  - name: gcp
-
-suites:
-  - name: simple_example
-    driver:
-      name: terraform
-      root_module_directory: test/fixtures/simple_example
-  - name: multi_region
-    driver:
-      name: terraform
-      root_module_directory: test/fixtures/multi_region
+describe "outputs" do
+  it 'should have a valid region' do
+    expect(output_region_map["us-central1"]).to eq "usc1"
+    expect(output_region_map["us-east1"]).to eq "use1"
+  end
+end
