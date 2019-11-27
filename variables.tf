@@ -15,7 +15,7 @@
  */
 
 variable "region" {
-  description = "A list of GCP region codes for each of the given regions. i.e. \"us-central1\"=\"usc1\""
+  description = "The GCP region to retrieve a short name for (ex. `us-central1)."
   type        = string
   default     = null
 }
