@@ -41,7 +41,6 @@ Functional examples are included in the
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
 | region | A list of GCP region codes for each of the given regions. i.e. "us-central1"="usc1" | string | `"null"` | no |
-| regions | A list of GCP region codes for each of the given regions. i.e. ["us-central1"] => {"us-central1"="usc1"} | list | `<list>` | no |
 
 ## Outputs
 

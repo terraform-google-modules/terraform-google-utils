@@ -19,6 +19,28 @@ terraform {
 }
 
 locals {
+  regions = [
+    "asia-east1",
+    "asia-east2",
+    "asia-northeast1",
+    "asia-northeast2",
+    "asia-south1",
+    "asia-southeast1",
+    "australia-southeast1",
+    "europe-north1",
+    "europe-west1",
+    "europe-west2",
+    "europe-west3",
+    "europe-west4",
+    "europe-west6",
+    "northamerica-northeast1",
+    "southamerica-east1",
+    "us-central1",
+    "us-east1",
+    "us-east4",
+    "us-west1",
+    "us-west2"
+  ]
   # Compute the regional shortname from component parts
   continent_short_name = {
     asia         = "az"
@@ -34,7 +56,7 @@ locals {
     replace(local.parts[1], "/(n)orth|(s)outh|(e)ast|(w)est|(c)entral/", "$1$2$3$4$5")
   ])
   # Same computation but kick back a map
-  region_short_name_map = var.regions == [] ? {} : { for full_region in var.regions : full_region =>
+  region_short_name_map = { for full_region in local.regions : full_region =>
     join(
       "", [
         local.continent_short_name[split(

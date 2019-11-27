@@ -19,7 +19,5 @@ provider "google" {
 }
 
 module "utils" {
-  source  = "../.."
-  regions = ["us-central1", "us-east1"]
+  source = "../.."
 }
-
