@@ -1,6 +1,6 @@
 # terraform-google-utils
 
-This module provides a way to get the shortnames for given GCP region(s). For example, "us-central1" becomes "usc1".
+This module provides a way to get the shortnames for a given GCP region. For example, "us-central1" becomes "usc1". This module also always outputs a map for every region, which allows you to do multiple at once.
 
 This module does not communicate with GCP in any way.
 
@@ -12,23 +12,21 @@ Basic usage of this module is as follows:
 module "utils" {
   source  = "terraform-google-modules/utils/google"
   version = "~> 0.1"
-  regions = ["us-central1", "us-west1"]
-}
-
-output "region_short_name_map" {
-  description = "Map of full to short name of all given regions"
-  value       = "${module.utils.region_short_name_map}"
-}
-
-module "utils" {
-  source  = "terraform-google-modules/utils/google"
-  version = "~> 0.1"
   region  = "us-central1"
 }
 
-output "region_short_name" {
-  description = "Short name of the given region"
-  value       = "${module.utils.region_short_name}"
+locals {
+  "us-central1" = module.utils.region_short_name
+  "asia-east1"  = module.utils.region_short_name_map["asia-east1"]
+}
+```
+
+The above results in locals with computed values of:
+
+```
+locals {
+  "us-central1" = "usc1"
+  "asia-east1"  = "aze1"
 }
 ```
 
@@ -40,13 +38,13 @@ Functional examples are included in the
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| region | A list of GCP region codes for each of the given regions. i.e. "us-central1"="usc1" | string | `"null"` | no |
+| region | The GCP region to retrieve a short name for (ex. `us-central1). | string | `"null"` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| region\_short\_name | The 4 or 5 character shortname of a given region. |
+| region\_short\_name | The 4 or 5 character shortname of the region specified in var.region. |
 | region\_short\_name\_map | The 4 or 5 character shortname of any given region. |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
