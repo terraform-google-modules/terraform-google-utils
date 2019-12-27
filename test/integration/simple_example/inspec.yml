@@ -1,0 +1,14 @@
+name: simple_example
+depends:
+  - name: inspec-gcp
+    git: https://github.com/inspec/inspec-gcp.git
+    tag: v0.10.0
+supports:
+  - platform: gcp
+attributes:
+  - name: region
+    required: true
+    type: string
+  - name: output_region_short_name
+    required: true
+    type: string
