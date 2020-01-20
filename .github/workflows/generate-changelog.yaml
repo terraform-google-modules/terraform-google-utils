@@ -14,6 +14,10 @@ jobs:
           node-version: '10.x'
       - name: Update dependencies
         run: npm install -g standard-version
+      - name: Configure git
+        run: |
+          git config --global user.email "cloud-foundation-bot@google.com"
+          git config --global user.name "CFT Robot"
       - name: Generate changelog
         run: |
           standard-version
