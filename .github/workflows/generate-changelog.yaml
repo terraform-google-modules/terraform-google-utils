@@ -30,7 +30,7 @@ jobs:
           assignees: morgante
           reviewers: morgante
           title: 'Release new version'
-          branch: create-pull-request/patch-gcloud-version
+          branch: chore/changelog-generation
           branch-suffix: none
       - name: Check outputs
         run: |
