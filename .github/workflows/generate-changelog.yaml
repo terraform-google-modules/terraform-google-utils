@@ -13,8 +13,10 @@ jobs:
         with:
           node-version: '10.x'
       - name: Update dependencies
+        run: npm install -g standard-version
+      - name: Generate changelog
         run: |
-          npm install -g standard-version
+          standard-version
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v1
