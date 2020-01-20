@@ -1,0 +1,24 @@
+name: Release new version
+on:
+  pull_request:
+      types: closed
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged && startsWith(github.head_ref, '[Release]')
+    steps:
+    - uses: actions/checkout@master
+    - name: Tag and prepare release
+      id: tag_and_prepare_release
+      uses: K-Phoen/semver-release-action@master
+      with:
+        release_branch: master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Upload release notes
+      if: steps.tag_and_prepare_release.outputs.tag
+      uses: Roang-zero1/github-create-release-action@master
+      with:
+        created_tag: ${{ steps.tag_and_prepare_release.outputs.tag }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
