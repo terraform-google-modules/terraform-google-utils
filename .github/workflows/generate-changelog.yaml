@@ -1,6 +1,8 @@
 name: Generate new release changelog
 on:
-  push: {}
+  push:
+    branches:
+      - master
   repository_dispatch:
     types: generate-pr
   schedule:
@@ -9,7 +11,7 @@ jobs:
   createPullRequest:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: '10.x'
@@ -20,7 +22,7 @@ jobs:
           standard-version
       - name: Create Pull Request
         id: cpr
-        uses: peter-evans/create-pull-request@v1
+        uses: peter-evans/create-pull-request@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           labels: chore
@@ -30,7 +32,6 @@ jobs:
           body: |
             Update changelog with information on next version.
           branch: chore/changelog-generation
-          branch-suffix: none
       - name: Check outputs
         run: |
           echo "Pull Request Number - ${{ env.PULL_REQUEST_NUMBER }}"
