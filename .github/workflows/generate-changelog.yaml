@@ -1,6 +1,8 @@
 name: Generate new release changelog
 on:
-  push: {}
+  push:
+    branches:
+      - master
   repository_dispatch:
     types: generate-pr
   schedule:
