@@ -1,5 +1,7 @@
 name: Generate new release changelog
 on:
+  repository_dispatch:
+    types: generate-pr
   schedule:
     - cron: '0 2 * * *'
 jobs:
