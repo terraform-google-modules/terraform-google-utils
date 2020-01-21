@@ -11,16 +11,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+      - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
       - name: read changelog
         run: cat CHANGELOG.md | grep -o -P "\d\.\d\.\d" | head -n 1
       - name: find release
         id: find_version
         run: |
           VERSION=$(cat CHANGELOG.md | grep -o -P "\d\.\d\.\d" | head -n 1)
+          TAG=$(git describe --abbrev=0 --tags)
           echo "::set-output name=version::$VERSION"
+          echo "::set-output name=tag::$TAG"
       - name: Check outputs
         run: |
           echo "Version Number - ${{ steps.find_version.outputs.version }}"
+          echo "Latest Tag - ${{ steps.find_version.outputs.tag }}"
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
