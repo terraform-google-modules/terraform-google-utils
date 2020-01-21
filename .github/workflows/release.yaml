@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: read changelog
-        run: cat CHANGELOG.md
+        run: cat CHANGELOG.md | grep -o "\d\.\d\.\d" | head -n 1
       - name: find release
         id: find_version
         run: |
