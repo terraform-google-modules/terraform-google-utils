@@ -12,11 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: read changelog
-        run: cat CHANGELOG.md | grep -o "\d\.\d\.\d" | head -n 1
+        run: cat CHANGELOG.md | grep -o -P "\d\.\d\.\d" | head -n 1
       - name: find release
         id: find_version
         run: |
-          VERSION=$(cat CHANGELOG.md | grep -o "\d\\.\d\.\d" | head -n 1)
+          VERSION=$(cat CHANGELOG.md | grep -o -P "\d\.\d\.\d" | head -n 1)
           echo "::set-output name=version::$VERSION"
       - name: Check outputs
         run: |
