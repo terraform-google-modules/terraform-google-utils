@@ -14,8 +14,7 @@ jobs:
       - name: find release
         id: find_version
         run: |
-          VERSION=$(cat CHANGELOG.md | grep -o "\d\\.\d\.\d" | head -n 1)
-          echo ::set-output name=version::$VERSION
+          echo ::set-output name=version::$(cat CHANGELOG.md | grep -o "\d\\.\d\.\d" | head -n 1)
       - name: Check outputs
         run: |
           echo "Version Number - ${{ steps.find_version.outputs.version }}"
