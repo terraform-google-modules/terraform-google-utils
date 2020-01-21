@@ -1,6 +1,7 @@
 # terraform-google-utils
 
-This module provides a way to get the shortnames for a given GCP region. For example, "us-central1" becomes "usc1". This module also always outputs a map for every region, which allows you to do multiple at once.
+This module provides a way to get the shortnames for a given GCP region.
+For example, "us-central1" becomes "usc1". This module also always outputs a map for every region, which allows you to do multiple at once.
 
 This module does not communicate with GCP in any way.
 
