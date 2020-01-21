@@ -32,7 +32,7 @@ jobs:
           body: |
             Update changelog with information on next version.
           branch: chore/changelog-generation
-          branch-suffix: none
+          branch-suffix: short-commit-hash
       - name: Check outputs
         run: |
           echo "Pull Request Number - ${{ env.PULL_REQUEST_NUMBER }}"
