@@ -20,8 +20,10 @@ describe "outputs" do
     expect(output_region_map["asia-east2"]).to eq "aze2"
     expect(output_region_map["asia-northeast1"]).to eq "azne1"
     expect(output_region_map["asia-northeast2"]).to eq "azne2"
+    expect(output_region_map["asia-northeast3"]).to eq "azne3"
     expect(output_region_map["asia-south1"]).to eq "azs1"
     expect(output_region_map["asia-southeast1"]).to eq "azse1"
+    expect(output_region_map["asia-southeast2"]).to eq "azse2"
     expect(output_region_map["australia-southeast1"]).to eq "ause1"
     expect(output_region_map["europe-north1"]).to eq "eun1"
     expect(output_region_map["europe-west1"]).to eq "euw1"
@@ -36,5 +38,7 @@ describe "outputs" do
     expect(output_region_map["us-east4"]).to eq "use4"
     expect(output_region_map["us-west1"]).to eq "usw1"
     expect(output_region_map["us-west2"]).to eq "usw2"
+    expect(output_region_map["us-west3"]).to eq "usw3"
+    expect(output_region_map["us-west4"]).to eq "usw4"
   end
 end
