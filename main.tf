@@ -14,14 +14,17 @@
  * limitations under the License.
  */
 
+
 locals {
   regions = [
     "asia-east1",
     "asia-east2",
     "asia-northeast1",
     "asia-northeast2",
+    "asia-northeast3",
     "asia-south1",
     "asia-southeast1",
+    "asia-southeast2",
     "australia-southeast1",
     "europe-north1",
     "europe-west1",
@@ -35,7 +38,9 @@ locals {
     "us-east1",
     "us-east4",
     "us-west1",
-    "us-west2"
+    "us-west2",
+    "us-west3",
+    "us-west4",
   ]
   # Compute the regional shortname from component parts
   continent_short_name = {
