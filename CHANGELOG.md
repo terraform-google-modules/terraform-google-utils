@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://www.github.com/terraform-google-modules/terraform-google-utils/compare/v0.2.1...v0.3.0) (2020-10-12)
+
+
+### Features
+
+* Add support for new regions ([#29](https://www.github.com/terraform-google-modules/terraform-google-utils/issues/29)) ([933765f](https://www.github.com/terraform-google-modules/terraform-google-utils/commit/933765f18ead1c3edc1b2534beec922c126ddafe))
+* Update to allow using Terraform 0.13 ([#28](https://www.github.com/terraform-google-modules/terraform-google-utils/issues/28)) ([1e2587c](https://www.github.com/terraform-google-modules/terraform-google-utils/commit/1e2587caae83c88ba6e022443d9375da80de4b00))
+
+
+### Bug Fixes
+
+* Upgrade to support Terraform 0.13.x ([#26](https://www.github.com/terraform-google-modules/terraform-google-utils/issues/26)) ([e3a83a4](https://www.github.com/terraform-google-modules/terraform-google-utils/commit/e3a83a47c3198b1180950333c511b57b16014435))
+
 ### [0.2.1](https://github.com/terraform-google-modules/terraform-google-utils/compare/v0.2.0...v0.2.1) (2020-01-21)
 
 
