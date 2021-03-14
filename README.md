@@ -38,8 +38,8 @@ Functional examples are included in the
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-----:|:-----:|
-| region | The GCP region to retrieve a short name for (ex. `us-central1). | string | `"null"` | no |
+|------|-------------|------|---------|:--------:|
+| region | The GCP region to retrieve a short name for (ex. `us-central1).` | `string` | `null` | no |
 
 ## Outputs
 
