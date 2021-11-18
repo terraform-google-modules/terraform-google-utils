@@ -33,6 +33,7 @@ locals {
     "europe-west4",
     "europe-west6",
     "northamerica-northeast1",
+    "northamerica-northeast2",
     "southamerica-east1",
     "us-central1",
     "us-east1",

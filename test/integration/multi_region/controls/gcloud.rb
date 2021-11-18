@@ -32,6 +32,7 @@ describe "outputs" do
     expect(output_region_map["europe-west4"]).to eq "euw4"
     expect(output_region_map["europe-west6"]).to eq "euw6"
     expect(output_region_map["northamerica-northeast1"]).to eq "nane1"
+    expect(output_region_map["northamerica-northeast2"]).to eq "nane2"
     expect(output_region_map["southamerica-east1"]).to eq "sae1"
     expect(output_region_map["us-central1"]).to eq "usc1"
     expect(output_region_map["us-east1"]).to eq "use1"
