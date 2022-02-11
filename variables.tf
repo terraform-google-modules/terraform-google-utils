@@ -14,6 +14,11 @@
  * limitations under the License.
  */
 
+variable "project_id" {
+  description = "The project ID to lookup regions within."
+  type        = string
+}
+
 variable "region" {
   description = "The GCP region to retrieve a short name for (ex. `us-central1)."
   type        = string
