@@ -14,14 +14,12 @@
  * limitations under the License.
  */
 
-variable "additional_regions" {
-  description = "A user-supplied list of regions to extend the lookup map."
-  type        = list(string)
-  default     = []
+output "region_short_name_map" {
+  description = "The 4 or 5 character shortname of any given region."
+  value       = module.utils.region_short_name_map
 }
 
-variable "region" {
-  description = "The GCP region to retrieve a short name for (ex. `us-central1)."
-  type        = string
-  default     = null
+output "region_short_name" {
+  description = "The 4 or 5 character shortname of a given region."
+  value       = module.utils.region_short_name
 }

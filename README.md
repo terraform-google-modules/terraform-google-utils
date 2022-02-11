@@ -39,6 +39,7 @@ Functional examples are included in the
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| additional\_regions | A user-supplied list of regions to extend the lookup map. | `list(string)` | `[]` | no |
 | region | The GCP region to retrieve a short name for (ex. `us-central1).` | `string` | `null` | no |
 
 ## Outputs
