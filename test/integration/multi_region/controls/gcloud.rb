@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-output_region_map = attribute("output_region_short_name_map")
+output_region_map = attribute("region_short_name_map")
 
 describe "outputs" do
   it 'should have a valid region' do

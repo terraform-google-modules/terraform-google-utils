@@ -20,9 +20,9 @@ depends:
 supports:
   - platform: gcp
 attributes:
-  - name: region
+  - name: region_short_name
     required: true
     type: string
-  - name: output_region_short_name
+  - name: region_short_name_map
     required: true
-    type: string
+    type: hash
