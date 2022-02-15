@@ -1,5 +1,5 @@
 /**
- * Copyright 2018 Google LLC
+ * Copyright 2022 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,8 +14,12 @@
  * limitations under the License.
  */
 
-module "utils" {
-  source             = "../.."
-  additional_regions = ["us-central2"]
-  region             = "us-central2"
+output "region_short_name_map" {
+  description = "The 4 or 5 character shortname of any given region."
+  value       = module.example.region_short_name_map
+}
+
+output "region_short_name" {
+  description = "The 4 or 5 character shortname of a given region."
+  value       = module.example.region_short_name
 }
