@@ -14,10 +14,6 @@
  * limitations under the License.
  */
 
-provider "google" {
-  version = "~> 2.0"
-}
-
 module "utils" {
   source = "../.."
   region = "us-central1"

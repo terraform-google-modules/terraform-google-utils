@@ -1,5 +1,5 @@
 /**
- * Copyright 2018 Google LLC
+ * Copyright 2022 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,14 +14,6 @@
  * limitations under the License.
  */
 
-variable "additional_regions" {
-  description = "A user-supplied list of regions to extend the lookup map."
-  type        = list(string)
-  default     = []
-}
-
-variable "region" {
-  description = "The GCP region to retrieve a short name for (ex. `us-central1)."
-  type        = string
-  default     = null
+terraform {
+  required_version = ">= 0.12"
 }
