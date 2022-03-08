@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/terraform-google-modules/terraform-google-utils/compare/v0.4.0...v0.5.0) (2022-02-15)
+
+
+### Features
+
+* adds additional_regions variable allowing user specified regions (e.g. new, non-GA, etc.) ([#38](https://github.com/terraform-google-modules/terraform-google-utils/issues/38)) ([a2129f2](https://github.com/terraform-google-modules/terraform-google-utils/commit/a2129f2be6654cfd14fdf59e373b1fbb7c408cb4))
+
 ## [0.4.0](https://www.github.com/terraform-google-modules/terraform-google-utils/compare/v0.3.0...v0.4.0) (2021-11-18)
 
 
