@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.6.0](https://github.com/terraform-google-modules/terraform-google-utils/compare/v0.5.0...v0.6.0) (2022-06-09)
+
+
+### Features
+
+* Add new Google Cloud regions ([d323e4e](https://github.com/terraform-google-modules/terraform-google-utils/commit/d323e4ebfca9d28a4f5f0b8b52e3adbd2e986b5d))
+
 ## [0.5.0](https://github.com/terraform-google-modules/terraform-google-utils/compare/v0.4.0...v0.5.0) (2022-02-15)
 
 
