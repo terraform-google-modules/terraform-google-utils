@@ -38,6 +38,9 @@ locals {
     "europe-west6",
     "europe-west8",
     "europe-west9",
+    "europe-west12",
+    "me-central1",
+    "me-west1",
     "northamerica-northeast1",
     "northamerica-northeast2",
     "southamerica-east1",
@@ -60,6 +63,7 @@ locals {
     northamerica = "na"
     southamerica = "sa"
     us           = "us"
+    me           = "me"
   }
   parts = var.region == null ? [] : split("-", var.region)
   region_short_name = var.region == null ? "" : join("", [
