@@ -12,7 +12,7 @@ Basic usage of this module is as follows:
 ```hcl
 module "utils" {
   source  = "terraform-google-modules/utils/google"
-  version = "~> 0.3"
+  version = "~> 0.7"
   region  = "us-central1"
 }
 
