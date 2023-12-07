@@ -13,9 +13,14 @@
 # limitations under the License.
 
 output_region_short_name = attribute("region_short_name")
+output_zone_short_name = attribute("zone_short_name")
 
 describe "outputs" do
   it 'should have a valid region' do
     expect(output_region_short_name).to eq "usc1"
   end
+
+  it 'should have a valid zone' do
+    expect(output_zone_short_name).to eq "usc1a"
+  end  
 end

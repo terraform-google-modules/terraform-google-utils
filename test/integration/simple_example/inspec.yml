@@ -26,3 +26,9 @@ attributes:
   - name: region_short_name_map
     required: true
     type: hash
+  - name: zone_short_name
+    required: true
+    type: string
+  - name: zone_short_name_map
+    required: true
+    type: hash

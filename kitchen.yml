@@ -38,3 +38,11 @@ suites:
     driver:
       name: terraform
       root_module_directory: test/fixtures/additional_regions
+  - name: multi_zone
+    driver:
+      name: terraform
+      root_module_directory: test/fixtures/multi_zone
+  - name: additional_zones
+    driver:
+      name: terraform
+      root_module_directory: test/fixtures/additional_zones

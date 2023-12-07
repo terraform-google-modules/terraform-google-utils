@@ -1,5 +1,5 @@
 /**
- * Copyright 2018 Google LLC
+ * Copyright 2022 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,22 +14,12 @@
  * limitations under the License.
  */
 
-output "region_short_name_map" {
-  description = "The 4 or 5 character shortname of any given region."
-  value       = local.region_short_name_map
-}
-
-output "region_short_name" {
-  description = "The 4 or 5 character shortname of the region specified in var.region."
-  value       = local.region_short_name
-}
-
 output "zone_short_name_map" {
   description = "The 4 or 5 character shortname of any given zone."
-  value       = local.zone_short_name_map
+  value       = module.example.zone_short_name_map
 }
 
 output "zone_short_name" {
-  description = "The 4 or 5 character shortname of the zone specified in var.zone."
-  value       = local.zone_short_name
+  description = "The 4 or 5 character shortname of a given zone."
+  value       = module.example.zone_short_name
 }

@@ -23,3 +23,13 @@ output "region_short_name" {
   description = "The 4 or 5 character shortname of a given region."
   value       = module.example.region_short_name
 }
+
+output "zone_short_name_map" {
+  description = "The 4 or 5 character shortname of any given zone."
+  value       = module.example.zone_short_name_map
+}
+
+output "zone_short_name" {
+  description = "The 4 or 5 character shortname of a given zone."
+  value       = module.example.zone_short_name
+}

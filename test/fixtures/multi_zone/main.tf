@@ -14,22 +14,6 @@
  * limitations under the License.
  */
 
-output "region_short_name_map" {
-  description = "The 4 or 5 character shortname of any given region."
-  value       = module.utils.region_short_name_map
-}
-
-output "region_short_name" {
-  description = "The 4 or 5 character shortname of a given region."
-  value       = module.utils.region_short_name
-}
-
-output "zone_short_name_map" {
-  description = "The 4 or 5 character shortname of any given zone."
-  value       = module.utils.zone_short_name_map
-}
-
-output "zone_short_name" {
-  description = "The 4 or 5 character shortname of a given zone."
-  value       = module.utils.zone_short_name
+module "example" {
+  source = "../../../examples/multi_zone"
 }
