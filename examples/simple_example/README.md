@@ -5,7 +5,7 @@ This example illustrates how to use the `utils` module.
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Inputs
 
-No input.
+No inputs.
 
 ## Outputs
 
