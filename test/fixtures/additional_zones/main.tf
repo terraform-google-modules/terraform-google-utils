@@ -15,5 +15,5 @@
  */
 
 module "example" {
-  source = "../../../examples/additional_zoness"
+  source = "../../../examples/additional_zones"
 }
