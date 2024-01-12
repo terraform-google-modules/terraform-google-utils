@@ -15,8 +15,9 @@
  */
 
 module "utils" {
-  source  = "terraform-google-modules/utils/google"
-  version = "~> 0.7"
+  source = "../.."
+  #source  = "terraform-google-modules/utils/google"
+  #version = "~> 0.8"
 
   region = "us-central1"
   zone   = "us-central1-a"
