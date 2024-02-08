@@ -17,6 +17,7 @@
 
 locals {
   regions = concat(var.additional_regions, [
+    "africa-south1",
     "asia-east1",
     "asia-east2",
     "asia-northeast1",
@@ -38,8 +39,10 @@ locals {
     "europe-west6",
     "europe-west8",
     "europe-west9",
+    "europe-west10",
     "europe-west12",
     "me-central1",
+    "me-central2",
     "me-west1",
     "northamerica-northeast1",
     "northamerica-northeast2",
@@ -57,6 +60,7 @@ locals {
   ])
   # Compute the regional shortname from component parts
   continent_short_name = {
+    africa       = "af"
     asia         = "az"
     australia    = "au"
     europe       = "eu"
