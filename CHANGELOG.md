@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.7.1](https://github.com/terraform-google-modules/terraform-google-utils/compare/v0.7.0...v0.7.1) (2024-02-23)
+
+
+### Bug Fixes
+
+* Add new regions ([#58](https://github.com/terraform-google-modules/terraform-google-utils/issues/58)) ([a30f3f8](https://github.com/terraform-google-modules/terraform-google-utils/commit/a30f3f87dd24b00dec6361960c859f8ed160600d))
+
 ## [0.7.0](https://github.com/terraform-google-modules/terraform-google-utils/compare/v0.6.0...v0.7.0) (2023-06-13)
 
 
