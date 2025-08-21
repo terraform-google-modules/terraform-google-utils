@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.0](https://github.com/terraform-google-modules/terraform-google-utils/compare/v0.7.1...v0.8.0) (2025-08-21)
+
+
+### Features
+
+* adding northamerica-south1 to the list of regions ([#64](https://github.com/terraform-google-modules/terraform-google-utils/issues/64)) ([e47ec01](https://github.com/terraform-google-modules/terraform-google-utils/commit/e47ec017dfd78e13fccd8b20229597651391d337))
+
+
+### Bug Fixes
+
+* **deps:** bump minimum terraform to v1.3 ([#63](https://github.com/terraform-google-modules/terraform-google-utils/issues/63)) ([8828eeb](https://github.com/terraform-google-modules/terraform-google-utils/commit/8828eeb015f283728d1279d6adb1b4f3f4b96313))
+
 ## [0.7.1](https://github.com/terraform-google-modules/terraform-google-utils/compare/v0.7.0...v0.7.1) (2024-02-23)
 
 
