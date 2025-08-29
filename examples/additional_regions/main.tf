@@ -16,7 +16,7 @@
 
 module "utils" {
   source  = "terraform-google-modules/utils/google"
-  version = "~> 0.7"
+  version = "~> 0.8"
 
   additional_regions = ["us-central2"]
   region             = "us-central2"
